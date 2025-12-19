@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 
-const BACKEND_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/ask`;
+const BACKEND_URL = https://backend-1-lufu.onrender.com/ask;
 
 
 export default function ChatPage() {
