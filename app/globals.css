@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* Layout */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.chat-header {
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.chat-header p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Chat Window */
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 20%;
+  color: #94a3b8;
+}
+
+/* Bubbles */
+.chat-bubble {
+  max-width: 75%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.chat-bubble.user {
+  background: #2563eb;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.assistant {
+  background: #1e293b;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.typing {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Input */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.chat-input button {
+  background: #22c55e;
+  border: none;
+  color: #022c22;
+  font-weight: 600;
+  padding: 0 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chat-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* Markdown inside chat bubble */
+
+.chat-bubble h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.chat-bubble h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1.1rem 0 0.5rem;
+}
+
+.chat-bubble h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+}
+
+.chat-bubble p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.chat-bubble ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.chat-bubble li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.chat-bubble strong {
+  font-weight: 600;
+}
